@@ -1,0 +1,61 @@
+/* Custom styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#characters .character-card {
+    transition: all 0.3s ease;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+#characters .character-card:hover {
+    transform: scale(1.05);
+}
+
+#characters .character-card.selected {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+    transform: scale(1.03);
+}
+
+.choice-btn {
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.choice-btn:hover {
+    transform: translateX(5px);
+}
+
+.costume-option {
+    transition: all 0.2s ease;
+}
+
+.costume-option:hover {
+    transform: scale(1.03);
+}
+
+.costume-option.selected {
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    #characters {
+        grid-template-columns: 1fr;
+    }
+    
+    #choices {
+        grid-template-columns: 1fr;
+    }
+}
